@@ -11,12 +11,11 @@ body {
 .header h1 {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .header h2 {
     font-size: 16px;
-    font-weight: 
+    margin-top: 5px;
 }
 
 .header h2::before {
@@ -30,7 +29,7 @@ body {
     border-top: 3px dotted hsla(0, 0%, 0%, .15);
 }
 
-.container__book {
+.container__add {
     margin-top: 20px;
     margin-right: 20px;
     width: 200px;
@@ -43,11 +42,66 @@ body {
     cursor: pointer;
 }
 
-.container__book:hover {
+.container__add:hover {
     border: 2px dotted hsl(230, 50%, 50%);
     color: hsl(230, 50%, 50%);
 }
 
 .container__book {
     
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: hsla(0, 0%, 0%, .7);
+    z-index: 1;
+}
+
+.modal-content {
+    position: relative; 
+    margin: 15% auto;
+    background-color: #fefefe;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    animation-name: animate-top;
+    animation-duration: 0.4s;
+}
+
+.modal-body {
+    text-align: left;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-body label {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal-body input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid hsla(0, 0%, 0%, .2);
+}
+
+@keyframes animate-top {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }

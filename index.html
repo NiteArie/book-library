@@ -13,15 +13,42 @@
 
     <header class="header">
         <h1>Book Library</h1>
+        <h2>A place to store books</h2>
         <h2>Using Local Storage to store books</h2>
     </header>
 
 
     <main class="container">
-        <section class="container__book">
+        <section class="container__add">
             <span>+</span>
         </section>
     </main>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                Add Book
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label>
+                        Title:
+                        <input type="text" name="title">
+                    </label>
+                    <label>
+                        Author:
+                        <input type="text" name="author">
+                    </label>
+                    <label>
+                        # of pages:
+                        <input type="number" name="pages">
+                    </label>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
