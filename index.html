@@ -30,20 +30,28 @@
                 Add Book
             </div>
             <div class="modal-body">
-                <form>
+                <form method="POST">
                     <label>
                         Title:
-                        <input type="text" name="title">
+                        <input type="text" name="title" required>
                     </label>
                     <label>
                         Author:
-                        <input type="text" name="author">
+                        <input type="text" name="author" required>
                     </label>
                     <label>
                         # of pages:
-                        <input type="number" name="pages">
+                        <input type="number" name="pages" required>
                     </label>
-
+                    <label>
+                        Already read
+                        <input type="radio" name="status" value="true">
+                    </label>
+                    <label>
+                        Planning to read
+                        <input type="radio" name="status" value="false">
+                    </label>
+                    <button type="submit">Add</button>
                 </form>
             </div>
         </div>

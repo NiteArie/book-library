@@ -27,6 +27,14 @@ body {
     width: 80%;
     margin: 20px auto;
     border-top: 3px dotted hsla(0, 0%, 0%, .15);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        justify-content: center;
+    }
 }
 
 .container__add {
@@ -42,13 +50,74 @@ body {
     cursor: pointer;
 }
 
+.container__add span {
+    display: block;
+    text-align: center;
+
+}
+
 .container__add:hover {
     border: 2px dotted hsl(230, 50%, 50%);
     color: hsl(230, 50%, 50%);
 }
 
 .container__book {
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: hsla(0, 0%, 100%, .15);
+    box-shadow: 0 4px 5px hsla(0, 0%, 0%, .1);
+}
+
+.container__book h3 {
+    font-size: 24px;
+    font-weight: 700;
+    background-color: hsl(220, 40%, 60%);
+    padding: 10px;
+    color: hsla(0, 0%, 95%, 1);
+    height: 48px;
+}
+
+.container__book span {
+    display: block;
+    padding-left: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: hsl(220, 20%, 50%);
+}
+
+.container__book__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.container__book__buttons button {
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: hsl(220, 10%, 50%);
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.container__book__buttons button:hover {
+    color: hsl(0, 50%, 50%);
+}
+
+.container__book__buttons button.read {
+    font-weight: bold;
+    border: 2px solid hsl(120, 30%, 50%);
+    color: hsl(120, 30%, 50%);
+}
+
+.container__book__buttons button.unread {
+    font-weight: bold;
+    border: 2px solid hsl(0, 30%, 50%);
+    color: hsl(0, 30%, 50%);
 }
 
 .modal {
@@ -62,6 +131,8 @@ body {
     background-color: hsla(0, 0%, 0%, .7);
     z-index: 1;
 }
+
+
 
 .modal-content {
     position: relative; 
@@ -81,18 +152,34 @@ body {
     justify-content: center;
 }
 
+.modal-body form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .modal-body label {
     width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .modal-body input {
     outline: none;
     border: none;
     border-bottom: 1px solid hsla(0, 0%, 0%, .2);
+}
+
+.modal-body button {
+
+    text-align: center;
+    margin: auto auto;
+
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
 }
 
 @keyframes animate-top {
