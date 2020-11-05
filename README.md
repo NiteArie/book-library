@@ -25,3 +25,7 @@ Live version: [https://nitearie.github.io/book-library/](https://nitearie.github
 ## Status
 
 The project is currently finished. Maybe I will comeback in the future to add more functionalities and refactor my code.
+
+## Inspiration
+
+By [The Odin Project](https://www.theodinproject.com/)
